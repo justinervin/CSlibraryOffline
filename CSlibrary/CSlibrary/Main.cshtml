@@ -184,8 +184,9 @@
                             else {
                                 <ul class="list-group">
                                     @foreach (var file in recentList) {
+                                        <!-- ~/UploadedFiles/@file["Filename"]-->
                                         <li class="list-group-item">
-                                            <a class="btn-link" href="~/UploadedFiles/@file["Filename"]">@file["Filename"]</a>
+                                            <a class="btn-link" href="Download.cshtml?filename=@file["Filename"]" alt ="">@file["Filename"]</a>
                                             <span class="label label-success pull-right">@file["CourseCode"]</span>
                                         </li>
                                     }

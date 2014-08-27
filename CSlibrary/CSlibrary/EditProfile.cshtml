@@ -14,6 +14,7 @@
         name = Request["fullName"];
         db.Execute("UPDATE Users SET Name=(@0) WHERE LOWER(idNumber) = LOWER(@1)", name, idNumber);
         Response.Redirect("Main.cshtml");
+        
     }
     
 }
@@ -94,7 +95,6 @@
                     <h1>Edit Profile</h1>
                 }
             }
-
             <div class="profile-template">
                 <form method="post" action="EditProfile.cshtml" class="form-horizontal" role="form">
                     <div class="form-group">
@@ -107,7 +107,7 @@
                     <div class="form-group">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
-                            <button type="submit" value="submit" class="btn btn-success btn-block" tabindex="2">Save</button>
+                            <button type="submit" id="btn2" value="submit" class="btn btn-success btn-block" tabindex="2">Save</button>
                         </div>
                         <div class="col-sm-1"></div>
                     </div>
@@ -122,6 +122,8 @@
             <p class="copyright text-muted small">Copyright &copy; 2014 WEBAPPS Buddies. All Rights Reserved</p>
         </div>
     </footer>
+            
+    
     <!-- JavaScript -->
     <script src="~/Scripts/jquery-2.1.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
